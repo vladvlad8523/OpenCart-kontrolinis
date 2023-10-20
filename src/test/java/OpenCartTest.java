@@ -64,7 +64,7 @@ public class OpenCartTest extends BaseDriverSettings {
         WebElement agree = driver.findElement(By.xpath("/html//button[@id='button-register']"));
         agree.click();
 
-
+        driver.findElement(By.cssSelector("button.btn-close")).click();
 
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver; js.executeScript("window.scrollTo(0, 1000)"); //scroll up
