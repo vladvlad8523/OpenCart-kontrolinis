@@ -9,13 +9,12 @@ import java.time.Duration;
 public class BaseDriverSettings {
     private final static String BASE_URL = ("http://192.168.11.6");
 
-    public WebDriver driver;
+    public WebDriver driver = new ChromeDriver();
 
 
     @BeforeEach
     public void init () {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
         driver.get(BASE_URL);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
